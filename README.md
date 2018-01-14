@@ -2,6 +2,8 @@
 
 Laat alle luierpunten in Gemeente Ede zien op een kaart.
 
+[Live!](https://gerbenjacobs.github.io/luierpunten-ede/)
+
 ## Data
 
 Data is (auteursrechtelijk) afkomstig van http://www.meerafvalapart.nl/luierpunten.
