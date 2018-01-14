@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
         crossorigin="">
+    <link rel="shortcut icon" href="favicon.ico" />
     <style>
         html,
         body {
@@ -55,15 +56,15 @@
         crossorigin=""></script>
     <script src="luierpunten.js"></script>
     <script>
-            var mymap = L.map('mapid').setView([52.06, 5.666667], 12);
-            var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-            var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-            L.tileLayer(osmUrl, { minZoom: 11, maxZoom: 18, attribution: osmAttrib }).addTo(mymap);
-            
-            
-            luierpunten.forEach(function (p) {
-                L.marker(p.coordinate).bindPopup(`<strong>${p.name}</strong><br>${p.address}<br>${p.postalcode} ${p.city}<br><em>${p.remarks}</em>`).addTo(mymap);
-            });            
+        var mymap = L.map('mapid').setView([52.06, 5.666667], 12);
+        var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+        L.tileLayer(osmUrl, { minZoom: 11, maxZoom: 18, attribution: osmAttrib }).addTo(mymap);
+
+
+        luierpunten.forEach(function (p) {
+            L.marker(p.coordinate).bindPopup(`<strong>${p.name}</strong><br>${p.address}<br>${p.postalcode} ${p.city}<br><em>${p.remarks}</em>`).addTo(mymap);
+        });            
     </script>
 </body>
 
