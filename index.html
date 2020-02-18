@@ -12,8 +12,8 @@
     <style>
         html,
         body {
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
             font-family: 'Source Sans Pro', sans-serif;
             height: 100%;
         }
@@ -43,12 +43,12 @@
         <p>
             Luierpunten is een locatie waar je als ouder vieze luiers kunt afleveren zodat deze niet met het normale restafval mee hoeven.
             <br> Deze kaart laat alle
-            <a href="http://www.meerafvalapart.nl/luierpunten">luierpunten</a> zien in de Gemeente Ede.
+            <a href="https://www.ede.nl/aanvragen-en-regelen/afval/">luierpunten</a> zien in de Gemeente Ede.
         </p>
         <p>
             Meer informatie over deze pagina
             <a href="https://github.com/gerbenjacobs/luierpunten-ede">vind je hier</a>, data is afkomstig van
-            <a href="https://www.acv-groep.nl/">ACV groep</a>.
+            de <a href="https://www.acv-groep.nl/">ACV groep</a> via de <a href="https://wasteportal.ximmio.com/modules/f8e2844a-095e-48f9-9f98-71fceb51d2c3/scheidingswijzer/scheidingswijzer.html?698629&Bergstraat---4%20%20%20---6711DD---EDE%20GLD---EDE">Afvalkalender</a>.
         </p>
     </div>
     <div id="mapid"></div>
@@ -56,15 +56,15 @@
         crossorigin=""></script>
     <script src="luierpunten.js"></script>
     <script>
-        var mymap = L.map('mapid').setView([52.06, 5.666667], 12);
-        var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-        var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-        L.tileLayer(osmUrl, { minZoom: 11, maxZoom: 18, attribution: osmAttrib }).addTo(mymap);
+        const myMap = L.map('mapid').setView([52.06, 5.666667], 12);
+        const osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        const osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+        L.tileLayer(osmUrl, { minZoom: 11, maxZoom: 18, attribution: osmAttrib }).addTo(myMap);
 
 
         luierpunten.forEach(function (p) {
-            L.marker(p.coordinate).bindPopup(`<strong>${p.name}</strong><br>${p.address}<br>${p.postalcode} ${p.city}<br><em>${p.remarks}</em>`).addTo(mymap);
-        });            
+            L.marker(p.coordinate).bindPopup(`<strong>${p.name}</strong><br>${p.address}<br>${p.postalcode} ${p.city}<br><em>${p.remarks}</em>`).addTo(myMap);
+        });
     </script>
 </body>
 

@@ -207,5 +207,21 @@ var luierpunten = [
         "postalcode": "6744 AJ",
         "city": "Ederveen",
         "remarks": "",
-    }
+    },
+    {
+        "name": "Blotenberglaan 1",
+        "coordinate": [52.029015, 5.658406],
+        "address": "Blotenberglaan 1",
+        "postalcode": "6717 EN",
+        "city": "Ede",
+        "remarks": "Onduidelijk punt, waarschijnlijk bij Basisschool De Zuiderpoort",
+    },
+    {
+        "name": "Eureka Woonzorghuis",
+        "coordinate": [52.097884, 5.769874],
+        "address": "Brummelweg 43",
+        "postalcode": "6731 SW",
+        "city": "Otterlo",
+        "remarks": "",
+    },
 ];
